@@ -1,0 +1,1 @@
+This folder contains Eclipse projects for the Freescale FRDM-K64F board.

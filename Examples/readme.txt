@@ -1,0 +1,1 @@
+This folder contains example components, projects or just code that relate to blog posts found on my site at http://centaurian.co.uk
