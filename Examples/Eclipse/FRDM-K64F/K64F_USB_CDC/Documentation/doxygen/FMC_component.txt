@@ -1,0 +1,258 @@
+/*!
+  \page FMC FMC (Init_FMC)
+**          This file implements the FMC (FMC) module initialization
+**          according to the Peripheral Initialization settings, and
+**          defines interrupt service routines prototypes.
+**
+
+- \subpage FMC_settings
+- \subpage FMC_regs_overview  
+- \subpage FMC_regs_details
+- \ref FMC_module "Component documentation" 
+\page FMC_regs_overview Registers Initialization Overview
+This page contains the initialization values for the registers of the peripheral(s) configured
+by the component. 
+<table>
+<tr><td colspan="4" class="ttitle1">FMC Initialization</td></tr>
+<tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
+<tr><td>0x4001F000</td><td>FMC_PFAPR</td>
+<td class="regNotResetVal">0x00F8013F</td>
+ <td>FMC_PFAPR register, peripheral FMC.</td></tr>
+<tr><td>0x4001F004</td><td>FMC_PFB0CR</td>
+<td class="regNotResetVal">0x3002001F</td>
+ <td>FMC_PFB0CR register, peripheral FMC.</td></tr>
+<tr><td>0x4001F008</td><td>FMC_PFB1CR</td>
+<td class="regNotResetVal">0x3002001F</td>
+ <td>FMC_PFB1CR register, peripheral FMC.</td></tr>
+</table>
+Color Denotes Reset Value
+<br/>
+\page FMC_regs_details Register Initialization Details
+This page contains detailed description of initialization values for the 
+registers of the peripheral(s) configured by the component. 
+
+<div class="reghdr1">FMC_PFAPR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">M7PFD</td>
+<td colspan="1" rowspan="2">M6PFD</td><td colspan="1" rowspan="2">M5PFD</td><td colspan="1" rowspan="2">M4PFD</td>
+<td colspan="1" rowspan="2">M3PFD</td><td colspan="1" rowspan="2">M2PFD</td><td colspan="1" rowspan="2">M1PFD</td>
+<td colspan="1" rowspan="2">M0PFD</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td>
+<td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="2" rowspan="2">M7AP</td><td colspan="2" rowspan="2">M6AP</td>
+<td colspan="2" rowspan="2">M5AP</td><td colspan="2" rowspan="2">M4AP</td><td colspan="2" rowspan="2">M3AP</td>
+<td colspan="2" rowspan="2">M2AP</td><td colspan="2" rowspan="2">M1AP</td><td colspan="2" rowspan="2">M0AP</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4001F000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00F8013F</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00F8003F</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>23</td><td>M7PFD</td><td>0x01</td><td>Master 7 Prefetch Disable</td>
+<tr><td>22</td><td>M6PFD</td><td>0x01</td><td>Master 6 Prefetch Disable</td>
+<tr><td>21</td><td>M5PFD</td><td>0x01</td><td>Master 5 Prefetch Disable</td>
+<tr><td>20</td><td>M4PFD</td><td>0x01</td><td>Master 4 Prefetch Disable</td>
+<tr><td>19</td><td>M3PFD</td><td>0x01</td><td>Master 3 Prefetch Disable</td>
+<tr><td>18</td><td>M2PFD</td><td>0x00</td><td>Master 2 Prefetch Disable</td>
+<tr><td>17</td><td>M1PFD</td><td>0x00</td><td>Master 1 Prefetch Disable</td>
+<tr><td>16</td><td>M0PFD</td><td>0x00</td><td>Master 0 Prefetch Disable</td>
+<tr><td>14 - 15</td><td>M7AP</td><td>0x00</td><td>Master 7 Access Protection</td>
+<tr><td>12 - 13</td><td>M6AP</td><td>0x00</td><td>Master 6 Access Protection</td>
+<tr><td>10 - 11</td><td>M5AP</td><td>0x00</td><td>Master 5 Access Protection</td>
+<tr><td>8 - 9</td><td>M4AP</td><td>0x00</td><td>Master 4 Access Protection</td>
+<tr><td>6 - 7</td><td>M3AP</td><td>0x00</td><td>Master 3 Access Protection</td>
+<tr><td>4 - 5</td><td>M2AP</td><td>0x02</td><td>Master 2 Access Protection</td>
+<tr><td>2 - 3</td><td>M1AP</td><td>0x02</td><td>Master 1 Access Protection</td>
+<tr><td>0 - 1</td><td>M0AP</td><td>0x02</td><td>Master 0 Access Protection</td>
+</tr></table>
+<div class="reghdr1">FMC_PFB0CR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="4" rowspan="1">B0RWSC</td><td colspan="4" rowspan="2">CLCK_WAY</td><td colspan="4"></td>
+<td colspan="1"></td><td colspan="2" rowspan="1">B0MW</td><td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="4"></td><td colspan="4">CINV_WAY</td><td colspan="1">S_B_INV</td><td colspan="2"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="3" rowspan="2">CRC</td>
+<td colspan="1" rowspan="2">B0DCE</td><td colspan="1" rowspan="2">B0ICE</td><td colspan="1" rowspan="2">B0DPE</td>
+<td colspan="1" rowspan="2">B0IPE</td><td colspan="1" rowspan="2">B0SEBE</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4001F004</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x3002001F</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x3004001F</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>28 - 31</td><td>B0RWSC</td><td>0x00</td><td>Bank 0 Read Wait State Control</td>
+<tr><td>24 - 27</td><td>CLCK_WAY</td><td>0x00</td><td>Cache Lock Way x</td>
+<tr><td>20 - 23</td><td>CINV_WAY</td><td>0x00</td><td>Cache Invalidate Way x</td>
+<tr><td>19</td><td>S_B_INV</td><td>0x00</td><td>Invalidate Prefetch Speculation Buffer</td>
+<tr><td>17 - 18</td><td>B0MW</td><td>0x00</td><td>Bank 0 Memory Width</td>
+<tr><td>5 - 7</td><td>CRC</td><td>0x00</td><td>Cache Replacement Control</td>
+<tr><td>4</td><td>B0DCE</td><td>0x01</td><td>Bank 0 Data Cache Enable</td>
+<tr><td>3</td><td>B0ICE</td><td>0x01</td><td>Bank 0 Instruction Cache Enable</td>
+<tr><td>2</td><td>B0DPE</td><td>0x01</td><td>Bank 0 Data Prefetch Enable</td>
+<tr><td>1</td><td>B0IPE</td><td>0x01</td><td>Bank 0 Instruction Prefetch Enable</td>
+<tr><td>0</td><td>B0SEBE</td><td>0x01</td><td>Bank 0 Single Entry Buffer Enable</td>
+</tr></table>
+<div class="reghdr1">FMC_PFB1CR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="4" rowspan="1">B1RWSC</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="2" rowspan="1">B1MW</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="4"></td><td colspan="2"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">B1DCE</td>
+<td colspan="1" rowspan="2">B1ICE</td><td colspan="1" rowspan="2">B1DPE</td><td colspan="1" rowspan="2">B1IPE</td>
+<td colspan="1" rowspan="2">B1SEBE</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4001F008</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x3002001F</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x3004001F</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>28 - 31</td><td>B1RWSC</td><td>0x00</td><td>Bank 1 Read Wait State Control</td>
+<tr><td>17 - 18</td><td>B1MW</td><td>0x00</td><td>Bank 1 Memory Width</td>
+<tr><td>4</td><td>B1DCE</td><td>0x01</td><td>Bank 1 Data Cache Enable</td>
+<tr><td>3</td><td>B1ICE</td><td>0x01</td><td>Bank 1 Instruction Cache Enable</td>
+<tr><td>2</td><td>B1DPE</td><td>0x01</td><td>Bank 1 Data Prefetch Enable</td>
+<tr><td>1</td><td>B1IPE</td><td>0x01</td><td>Bank 1 Instruction Prefetch Enable</td>
+<tr><td>0</td><td>B1SEBE</td><td>0x01</td><td>Bank 1 Single Entry Buffer Enable</td>
+</tr></table>
+*/
+/*!
+\page FMC_settings Component Settings
+\code
+**          Component name                                 : FMC
+**          Device                                         : FMC
+**          Access Protection                              : 
+**            Master 0                                     : 
+**              Prefetch                                   : Enabled
+**              Access protection                          : Read-Write
+**            Master 1                                     : 
+**              Prefetch                                   : Enabled
+**              Access protection                          : Read-Write
+**            Master 2                                     : 
+**              Prefetch                                   : Enabled
+**              Access protection                          : Read-Write
+**            Master 3                                     : 
+**              Prefetch                                   : Disabled
+**              Access protection                          : No access
+**            Master 4                                     : 
+**              Prefetch                                   : Disabled
+**              Access protection                          : Read only
+**            Master 5                                     : 
+**              Prefetch                                   : Disabled
+**              Access protection                          : No access
+**          Cache settings                                 : 
+**            Bank 0                                       : 
+**              Cache replacement control                  : Per set across all four ways
+**              Data cache                                 : Enabled
+**              Instruction cache                          : Enabled
+**              Data prefetch                              : Enabled
+**              Instruction prefetch                       : Enabled
+**              Page buffer                                : Enabled
+**            Bank 1                                       : 
+**              Data cache                                 : Enabled
+**              Instruction cache                          : Enabled
+**              Data prefetch                              : Enabled
+**              Instruction prefetch                       : Enabled
+**              Page buffer                                : Enabled
+**          Initialization                                 : 
+**            Call Init method                             : yes
+**            Utilize after reset values                   : default
+<h1>
+\endcode
+*/
